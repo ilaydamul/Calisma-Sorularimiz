@@ -20,17 +20,16 @@
 
     </form>
     <script>
-        var item=document.querySelectorAll(".a");
+
+        var item = document.getElementById("form1");
         console.log(item);
         function degerlerial() {
-          alert(item[0]+"The form was submitted");
-          array.forEach(element => {
-              
-          });
+            alert("Ad : "+item[0].value +", Soyad :" +item[1].value);
         }
-        </script>
+    </script>
     <br>
     <span>Butona tıklayınca alert kutusunda textboxlara girilen veriler gösterilsin.</span>
+    <span>Oldu</span>
 </body>
 
 </html>
