@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui praesentium neque dolorem itaque dolor facilis,
+        doloribus ratione nisi ut aliquam fugit quae id accusantium. Inventore iusto expedita necessitatibus culpa
+        sequi.</p>
+    <script>
+        var item = document.querySelector("p").textContent;
+        var item2 = item.length;
+        console.log(item);
+        console.log(item2);
+
+
+        item2.forEach(element =>  {
+            element.style.color = "red";
+        });
+
+
+
+    </script>
+    <br>
+    <span>Bir paragrafta 5 harfli kelimeleri DOM ile kırmızı renkte yazdırın.</span>
+</body>
+
+</html>
