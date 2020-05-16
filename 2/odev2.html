@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Ödev 2</title>
+</head>
+
+<body class="container">
+    <form>
+        <div class="form-group">
+            <label>Ürün Adı</label>
+            <input type="text" id="ad" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Ürün Fiyatı</label>
+            <input type="text" id="fiyat" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Ürün Adedi</label>
+            <input type="text" id="adet" class="form-control">
+        </div>
+        <table id="liste" class="table">
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Ürün Fiyatı</th>
+                <th>Ürün Adedi</th>
+            </tr>
+        </table>
+        <button class="btn btn-primary" id="ekle" onclick="kaydet()">Kaydet</button>
+    </form>
+    <script>
+
+
+        const ad = document.querySelector("#ad");
+        const fiyat = document.querySelector("#fiyat");
+        const adet = document.querySelector("#adet");
+        const ekle = document.querySelector("#ekle");
+        const liste = document.querySelector("#liste");
+
+
+        function kaydet(e) {
+
+            let tAd = document.createElement("td");
+            let tFiyat = document.createElement("td");
+            let tAdet = document.createElement("td");
+
+
+            tAd.textContent = ad.value;//textboxtan değeri okuyup aktarıyoruz.
+            tFiyat.textContent = fiyat.value;//textboxtan değeri okuyup aktarıyoruz.
+            tAdet.textContent = adet.value;//textboxtan değeri okuyup aktarıyoruz.
+
+
+            let tr = document.createElement("tr");
+
+            tr.appendChild(tAd);
+            tr.appendChild(tFiyat);
+            tr.appendChild(tAdet);
+
+            liste.appendChild(tr);
+
+            ad.focus();
+            
+        }
+
+    </script>
+</body>
+
+</html>

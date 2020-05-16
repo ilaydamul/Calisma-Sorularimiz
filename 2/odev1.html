@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ödev 1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body class="container">
+	<br><br>
+	<form>
+		<div class="form-group">
+			<label>Ad</label>
+			<input type="text" name="ad" class="form-control">
+		</div>
+		<div class="form-group">
+			<label>Soyad</label>
+			<input type="text" name="soyad" class="form-control">
+		</div>
+		<div class="form-group">
+			<label>E-Mail</label>
+			<input type="text" name="mail" class="form-control">
+		</div>
+		<button type="submit" class="btn btn-primary" onclick="bas()">Gönder</button>
+	</form>
+	<script>
+		function bas(e) {
+
+			const textler = document.querySelectorAll(".form-control");
+
+			for (let index = 0; index < textler.length; index++) {
+				if (textler[index].value == "") {
+					
+					const text = document.createTextNode("Boş alanı doldurunuz.");
+
+					const alt = document.getElementsByClassName("form-control")[0];
+
+					alt.appendChild(text);
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>
