@@ -11,17 +11,14 @@
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quae corrupti illo autem rem quisquam maiores
         nulla, ipsam ut soluta temporibus odio rerum eveniet magni, ullam, sequi quaerat harum? Ipsa.</p>
-<div>
+    <div>
 
-</div>
+    </div>
     <script>
-        const sayi=document.querySelector("p");
-
-        const body1=document.querySelector("div");
-        const text=document.createTextNode("Merhaba");
+        var item = document.querySelector("p").textContent;
+        var kelimeler = item.split(' ');
         
-
-        body1.appendChild(body1);
+        console.log(kelimeler.length);
     </script>
 
 </body>

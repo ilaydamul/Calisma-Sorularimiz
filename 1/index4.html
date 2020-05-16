@@ -15,18 +15,23 @@
 
 
     <script>
-        var item = document.querySelector("p").textContent;
-        var item2 = item.length;
-
-
+        const item = document.querySelector("p").textContent;
+        const kelimeler= item.split(' ');
         console.log(item);
-        console.log(item2);//244
-
-        item2.forEach(element => {
-            element.style.color = "red";
-        });
+        let yeniyazi;
+        for (let index = 0; index < kelimeler.length; index++) {
+            if (kelimeler[index].length==5) {
+                var kelime=kelimeler[index];
+                if (kelime[kelime.length-1]!="." && kelime[kelime.length-1]!=",") {
+                    yeniyazi+= "<span style='color=red'>"+ kelimeler[index]+"</span>";
+                }
+                else
+                yeniyazi+= kelimeler[index]+" ";
+            }
+            
+        }
         
-
+    
 
 
     </script>
