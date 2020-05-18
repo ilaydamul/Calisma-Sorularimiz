@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="container">
+
+    <br>
+    <div class="card">
+        <div class="card-header">
+            <h4 id="old">Anket</h4>
+            <label> Lütfen boşlukları uygun bir şekilde doldurunuz.</label>
+        </div>
+        <div class="card-body">
+            <br>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+              </div>
+            <form id="form">
+                <div class="form-group ">
+                    <label id="label1">Ad-Soyad</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label id="label2">Yaşınız</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group ">
+                    <label id="label2">En sevdiğiniz renk</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group deneme">
+                    <label id="label2">Düşünceleriniz</label>
+                    <input type="text" class="form-control">
+                </div>
+        </div>
+        </form>
+
+    </div>
+    <script>
+        const input1=document.querySelectorAll(".form-control")[0];
+        const prog=document.querySelector(".progress");
+        const oldProgress=document.querySelector(".progress-bar");
+        input1.addEventListener("change",degistir);
+        const progressForDiv=document.createElement("div");
+        const buton=document.querySelector(".btn");
+        const formm=document.querySelector("#form");
+
+        function degistir(){
+            
+            progressForDiv.className="progress-bar bg-warning";
+            progressForDiv.style="width: 100%";
+            progressForDiv.role="profressbar";
+
+            prog.replaceChild( progressForDiv,oldProgress);
+        }
+        console.log(progressForDiv.style);
+
+        if (progressForDiv.className=="progress-bar bg-warning") {
+            console.log("Çalışıyom");
+            const newButon=document.createElement("button");
+            newButon.className="btn btn-primary";
+            newButon.textContent="Gönder";
+            formm.appendChild(newButon);
+            
+        }
+        else
+        console.log("Çalışmıyom");
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
