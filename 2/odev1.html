@@ -14,35 +14,64 @@
 	<form>
 		<div class="form-group">
 			<label>Ad</label>
-			<input type="text" name="ad" class="form-control">
+			<input type="text" name="ad" class="form-control"><br>
 		</div>
 		<div class="form-group">
 			<label>Soyad</label>
-			<input type="text" name="soyad" class="form-control">
+			<input type="text" name="soyad" class="form-control"><br>
 		</div>
-		<div class="form-group">
+		<div class="form-group" id="ekle">
 			<label>E-Mail</label>
-			<input type="text" name="mail" class="form-control">
+			<input type="text" name="mail" class="form-control"> <br>
 		</div>
 		<button type="submit" class="btn btn-primary" onclick="bas()">Gönder</button>
 	</form>
+
+
 	<script>
-		function bas(e) {
+		function bas() {
+			const newDiv = document.createElement("div");
+			newDiv.className = "alert alert-danger";
+			newDiv.role = "alert";
 
 			const textler = document.querySelectorAll(".form-control");
+			const forAdd = document.querySelectorAll(".form-group");
 
 			for (let index = 0; index < textler.length; index++) {
 				if (textler[index].value == "") {
-					
-					const text = document.createTextNode("Boş alanı doldurunuz.");
-
-					const alt = document.getElementsByClassName("form-control")[0];
-
-					alt.appendChild(text);
+					newDiv.textContent = "Boş alanları doldurunuz!";
+					forAdd[index].appendChild(newDiv);
 				}
 			}
+			event.preventDefault();
 		}
 	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
 </body>
 
 </html>
