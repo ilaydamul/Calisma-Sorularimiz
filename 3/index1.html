@@ -11,29 +11,99 @@
 
 <body class="container">
     <br>
-    <div class="card">
-        <div class="card-header">
-            <h4 id="old">Hoşgeldiniz</h4>
-        </div>
-        <div class="card-body">
-            <br>
-            <form id="form">
-                <div class="form-group deneme">
-                    <label id="label1">Ad</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="form-group deneme2">
-                    <label id="label2">Soyad</label>
-                    <input type="text" class="form-control"> <br>
-                </div>
-                <button class="btn btn-primary">İleri</button>
-        </div>
-        </form>
+
 
     </div>
     <script>
-        //Bitti
-        const buton = document.querySelector("#form");
+
+
+
+        const cardDiv = document.createElement("div");
+        const cardheaderDiv = document.createElement("div");
+        const cardbodyDiv = document.createElement("div");
+        const formGrupDiv = document.createElement("div");
+        const formGrupDiv2 = document.createElement("div");
+        const form = document.createElement("form");
+        const headerr = document.createElement("h4");
+        const label1 = document.createElement("label");
+        const label2 = document.createElement("label");
+        const input = document.createElement("input");
+        const input2 = document.createElement("input");
+        const buton = document.createElement("button");
+
+        const bodyy = document.querySelector(".container");
+
+        buton.className = "btn btn-primary";
+        buton.textContent = "İleri";
+
+        input.type = "text";
+        input.className = "form-control";
+
+        headerr.textContent = "Hoşgeldiniz";
+
+        input2.type = "text";
+        input2.className = "form-control";
+
+        label1.textContent = "Ad";
+        label2.textContent = "Soyad";
+
+        cardDiv.className = "card";
+        cardheaderDiv.className = "card-header";
+        cardbodyDiv.className = "card-body";
+        formGrupDiv.className = "form-group";
+        formGrupDiv2.className = "form-group";
+
+        formGrupDiv.appendChild(label1);
+        formGrupDiv.appendChild(input);
+
+        formGrupDiv2.appendChild(label2);
+        formGrupDiv2.appendChild(input2);
+
+        form.appendChild(formGrupDiv);
+        form.appendChild(formGrupDiv2);
+        form.appendChild(buton);
+
+        cardbodyDiv.appendChild(form);
+        cardheaderDiv.appendChild(headerr);
+
+        cardDiv.appendChild(cardheaderDiv);
+        cardDiv.appendChild(cardbodyDiv);
+
+        bodyy.appendChild(cardDiv);
+
+        console.log(cardDiv);
+        console.log(formGrupDiv2);
+
+
+
+        buton.addEventListener("click",skip);
+        function skip(){
+            
+            bodyy.remove(cardDiv);
+
+
+
+            event.preventDefault();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*const buton = document.querySelector("#form");
         const divv = document.querySelector(".deneme");
         const divv2 = document.querySelector(".deneme2");
         const oldLabel1 = document.querySelector("#label1");
@@ -96,7 +166,7 @@
             }
 
             event.preventDefault();
-        }
+        }*/
 
     </script>
 
