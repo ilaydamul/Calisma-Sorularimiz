@@ -35,7 +35,6 @@
         const input2 = document.createElement("input");
         const input3 = document.createElement("input");
         const buton = document.createElement("button");
-        const buton2 = document.createElement("button");
 
         const bodyy = document.querySelector(".container");
         const bodyy2 = document.querySelector("#body2");
@@ -85,12 +84,12 @@
 
 
         const label3 = document.createElement("label");
-        const buton2 = document.createElement("button");
+
         const buton3 = document.createElement("button");
+        buton3.className = "btn btn-primary";
+        buton3.textContent = "Geri";
 
-
-
-        buton3.onclick(skip2());
+        buton3.addEventListener("click", skip2);
         function skip2() {
 
             bodyy.replaceChild(cardDiv, cardDiv2);
@@ -101,7 +100,7 @@
         function skip() {
 
             // bodyy.remove(cardDiv);
-            const cardDiv2 = document.createElement("div");
+
             const cardheaderDiv2 = document.createElement("div");
             const cardbodyDiv2 = document.createElement("div");
             const formGrupDivv1 = document.createElement("div");
@@ -115,6 +114,7 @@
             const inputv1 = document.createElement("input");
             const inputv2 = document.createElement("input");
             const inputv3 = document.createElement("input");
+            const buton2 = document.createElement("button");
 
 
             buton2.className = "btn btn-success";
@@ -125,8 +125,7 @@
 
             headerr1.textContent = "Devam Edin";
 
-            buton3.className = "btn btn-primary";
-            buton3.textContent = "Geri";
+
 
             inputv2.type = "text";
             inputv2.className = "form-control";
@@ -166,11 +165,7 @@
             cardDiv2.appendChild(cardheaderDiv2);
             cardDiv2.appendChild(cardbodyDiv2);
 
-            //bodyy2.appendChild(cardDiv2);
             bodyy.replaceChild(cardDiv2, cardDiv);
-
-
-            console.log(cardDiv2);
         }
 
     </script>
