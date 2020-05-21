@@ -12,26 +12,33 @@
 <body class="container">
     <br>
 
+    <div id="body2">
 
     </div>
+
     <script>
 
 
 
         const cardDiv = document.createElement("div");
+        const cardDiv2 = document.createElement("div");
         const cardheaderDiv = document.createElement("div");
         const cardbodyDiv = document.createElement("div");
         const formGrupDiv = document.createElement("div");
         const formGrupDiv2 = document.createElement("div");
+        const formGrupDiv3 = document.createElement("div");
         const form = document.createElement("form");
         const headerr = document.createElement("h4");
         const label1 = document.createElement("label");
         const label2 = document.createElement("label");
         const input = document.createElement("input");
         const input2 = document.createElement("input");
+        const input3 = document.createElement("input");
         const buton = document.createElement("button");
+        const buton2 = document.createElement("button");
 
         const bodyy = document.querySelector(".container");
+        const bodyy2 = document.querySelector("#body2");
 
         buton.className = "btn btn-primary";
         buton.textContent = "İleri";
@@ -44,14 +51,19 @@
         input2.type = "text";
         input2.className = "form-control";
 
+        input3.type = "text";
+        input3.className = "form-control";
+
         label1.textContent = "Ad";
         label2.textContent = "Soyad";
 
         cardDiv.className = "card";
+        cardDiv2.className = "card";
         cardheaderDiv.className = "card-header";
         cardbodyDiv.className = "card-body";
         formGrupDiv.className = "form-group";
         formGrupDiv2.className = "form-group";
+        formGrupDiv3.className = "form-group";
 
         formGrupDiv.appendChild(label1);
         formGrupDiv.appendChild(input);
@@ -71,19 +83,81 @@
 
         bodyy.appendChild(cardDiv);
 
-        console.log(cardDiv);
-        console.log(formGrupDiv2);
+
+        const label3 = document.createElement("label");
 
 
+        buton.addEventListener("click", skip);
+        function skip() {
 
-        buton.addEventListener("click",skip);
-        function skip(){
-            
             bodyy.remove(cardDiv);
 
 
 
-            event.preventDefault();
+            const cardDiv2 = document.createElement("div");
+            const cardheaderDiv2 = document.createElement("div");
+            const cardbodyDiv2 = document.createElement("div");
+            const formGrupDivv1 = document.createElement("div");
+            const formGrupDivv2 = document.createElement("div");
+            const formGrupDivv3 = document.createElement("div");
+            const form1 = document.createElement("form");
+            const headerr1 = document.createElement("h4");
+            const labelv1 = document.createElement("label");
+            const labelv2 = document.createElement("label");
+            const labelv3 = document.createElement("label");
+            const inputv1 = document.createElement("input");
+            const inputv2 = document.createElement("input");
+            const inputv3 = document.createElement("input");
+            const buton2 = document.createElement("button");
+
+            buton2.className = "btn btn-success";
+            buton2.textContent = "Bitirin";
+
+            inputv1.type = "text";
+            inputv1.className = "form-control";
+
+            headerr1.textContent = "Devam Edin";
+
+            inputv2.type = "text";
+            inputv2.className = "form-control";
+
+            inputv3.type = "text";
+            inputv3.className = "form-control";
+
+            labelv1.textContent = "Kullanıcı Adı";
+            labelv2.textContent = "E-Mail";
+            labelv3.textContent = "Şifre";
+
+            cardDiv2.className = "card";
+            cardheaderDiv2.className = "card-header";
+            cardbodyDiv2.className = "card-body";
+            formGrupDivv1.className = "form-group";
+            formGrupDivv2.className = "form-group";
+            formGrupDivv3.className = "form-group";
+
+            formGrupDivv1.appendChild(labelv1);
+            formGrupDivv1.appendChild(inputv1);
+
+            formGrupDivv2.appendChild(labelv2);
+            formGrupDivv2.appendChild(inputv2);
+
+            formGrupDivv3.appendChild(labelv3);
+            formGrupDivv3.appendChild(inputv3);
+
+            form1.appendChild(formGrupDivv1);
+            form1.appendChild(formGrupDivv2);
+            form1.appendChild(formGrupDivv3);
+            form1.appendChild(buton2);
+
+            cardbodyDiv2.appendChild(form1);
+            cardheaderDiv2.appendChild(headerr1);
+
+            cardDiv2.appendChild(cardheaderDiv2);
+            cardDiv2.appendChild(cardbodyDiv2);
+
+            bodyy2.appendChild(cardDiv2);
+
+            console.log(cardDiv2);
         }
 
 

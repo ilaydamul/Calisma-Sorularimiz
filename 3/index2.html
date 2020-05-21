@@ -10,78 +10,73 @@
 </head>
 
 <body class="container">
-
     <br>
+
+
     <div class="card">
         <div class="card-header">
-            <h4 id="old">Anket</h4>
-            <label> Lütfen boşlukları uygun bir şekilde doldurunuz.</label>
+            <h3>En sevdiğiniz renk</h3>
         </div>
         <div class="card-body">
-            <br>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
-              </div>
-            <form id="form">
-                <div class="form-group ">
-                    <label id="label1">Ad-Soyad</label>
-                    <input type="text" class="form-control">
+            <div class="row" id="1">
+                <div class="col-3">
+                    <div>
+                        <label>Siyah</label>
+                        <input type="radio" onclick="check()">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label id="label2">Yaşınız</label>
-                    <input type="text" class="form-control">
+            </div>
+            <div class="row" id="2">
+                <div class="col-3">
+                    <div>
+                        <label>Beyaz</label>
+                        <input type="radio" onclick="check()">
+                    </div>
                 </div>
-                <div class="form-group ">
-                    <label id="label2">En sevdiğiniz renk</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="form-group deneme">
-                    <label id="label2">Düşünceleriniz</label>
-                    <input type="text" class="form-control">
-                </div>
+            </div>
+
+
+
         </div>
-        </form>
 
     </div>
+
     <script>
-        const input1=document.querySelectorAll(".form-control")[0];
-        const prog=document.querySelector(".progress");
-        const oldProgress=document.querySelector(".progress-bar");
-        input1.addEventListener("change",degistir);
-        const progressForDiv=document.createElement("div");
-        const buton=document.querySelector(".btn");
-        const formm=document.querySelector("#form");
 
-        function degistir(){
-            
-            progressForDiv.className="progress-bar bg-warning";
-            progressForDiv.style="width: 25%";
-            progressForDiv.role="profressbar";
+        const row1 = document.getElementById(1);
+        const row2 = document.getElementById(2);
+        const progressDiv = document.createElement("div");
+        const progressDiv2 = document.createElement("div");
+        const progress = document.createElement("div");
+        const progress2 = document.createElement("div");
+        const input1 = document.querySelector("input")[0];
+        const input2 = document.querySelector("input")[1];
 
-            prog.replaceChild( progressForDiv,oldProgress);
+        progressDiv.className = "col-6 progress";
+        progressDiv2.className = "col-6 progress";
+
+        progress.className = "progress-bar";
+        progress.role = "progressbar";
+        progress.style = "width:70%";
+
+        progress2.className = "progress-bar";
+        progress2.role = "progressbar";
+        progress2.style = "width:30%";
+
+
+
+        progressDiv.appendChild(progress);
+        progressDiv2.appendChild(progress2);
+
+        function check() {
+            row1.appendChild(progressDiv);
+            row2.appendChild(progressDiv2);
+            input1.style = "visibility: hidden;";
+            input2.style = "visibility: hidden;";
+
         }
-        console.log(progressForDiv.style);
 
-        if (progressForDiv.className=="progress-bar bg-warning") {
-            console.log("Çalışıyom");
-            const newButon=document.createElement("button");
-            newButon.className="btn btn-primary";
-            newButon.textContent="Gönder";
-            formm.appendChild(newButon);
-            
-        }
-        else
-        console.log("Çalışmıyom");
     </script>
-
-
-
-
-
-
-
-
-
 
 
 
