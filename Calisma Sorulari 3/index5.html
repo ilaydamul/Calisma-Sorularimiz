@@ -17,35 +17,39 @@
             <form class="form">
                 <div class="form-group">
                     <label>Yorumlarınız</label>
-                    <textarea class="form-control" id="content" name="content" onkeyup="checkChar()"
-                        onkeydown="checkChar()" cols="50" rows="10"></textarea><br>
+                    <textarea class="form-control" id="content" name="content" cols="50" rows="10"></textarea><br>
+                    <button class="btn btn-warning">30</button>
                 </div>
                 <button class="btn btn-danger">Gönder</button>
             </form>
         </div>
     </div>
-    <div id="report"></div>
     <script>
 
 
 
-        const newDiv = document.createElement("div");
-        newDiv.className = "alert alert-danger";
-        newDiv.role = "alert";
-        
-        const formm = document.querySelector(".form-group");
 
-        function checkChar() {
-            var textt = document.querySelector("#content");
-            var textUzunluk = textt.value.length;
-            var sinir = 30;
-            newDiv.textContent = "DİKKAT!! Karakter Sınırını Geçtiniz ("+sinir+")";
-            if (textUzunluk > sinir) {
-                textt.value = textt.value.substring(0, sinir);
-                formm.appendChild(newDiv);
-            }
+
+
+
+        var textt = document.querySelector("#content");
+        textt.oninput = function () {
+            
+            const karakterrs = document.createElement("button");
+            karakterrs.className = "btn btn-warning";
+            const oldButton = document.querySelector(".btn-warning");
+            const cardBody = document.querySelector(".form-group");
+            var maksimum = 30;
+
+            textt.value = textt.value.substr(0, maksimum);
+
+            var kalan = maksimum - textt.value.length;
+
+            karakterrs.textContent = kalan;
+
+            cardBody.replaceChild(karakterrs, oldButton);
+
         }
-
     </script>
 
 

@@ -52,19 +52,17 @@
         mail.addEventListener("change", regKontrol);
         function regKontrol() {
             if (mail.value.match(regex)) {
-                console.log("OLDU");
-                
-                if (i==1) {
+
+                if (i == 1) {
                     newDiv.remove();
                 }
                 else
-                     i=0;
+                    i = 0;
             }
             else {
-                console.log("OLMADI");
                 elemanEkle.appendChild(newDiv);
-                i=1;
-                
+                i = 1;
+
             }
         }
 
