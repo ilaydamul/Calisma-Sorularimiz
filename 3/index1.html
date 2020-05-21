@@ -90,7 +90,7 @@
         buton.addEventListener("click", skip);
         function skip() {
 
-            bodyy.remove(cardDiv);
+           // bodyy.remove(cardDiv);
 
 
 
@@ -155,7 +155,9 @@
             cardDiv2.appendChild(cardheaderDiv2);
             cardDiv2.appendChild(cardbodyDiv2);
 
-            bodyy2.appendChild(cardDiv2);
+            //bodyy2.appendChild(cardDiv2);
+            bodyy.replaceChild(cardDiv2,cardDiv);
+
 
             console.log(cardDiv2);
         }
