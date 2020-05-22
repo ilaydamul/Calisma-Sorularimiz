@@ -22,7 +22,7 @@
                 <div class="col-3">
                     <div>
                         <label>Siyah</label>
-                        <input type="radio" onclick="check()">
+                        <input type="radio" onclick="check()" name="1">
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                 <div class="col-3">
                     <div>
                         <label>Beyaz</label>
-                        <input type="radio" onclick="check()">
+                        <input type="radio" onclick="check()" name="1">
                     </div>
                 </div>
             </div>
@@ -49,8 +49,8 @@
         const progressDiv2 = document.createElement("div");
         const progress = document.createElement("div");
         const progress2 = document.createElement("div");
-        const input1 = document.querySelector("input")[0];
-        const input2 = document.querySelector("input")[1];
+        let input1 = document.querySelectorAll("input")[0];
+        let input2 = document.querySelectorAll("input")[1];
 
         progressDiv.className = "col-6 progress";
         progressDiv2.className = "col-6 progress";
@@ -71,8 +71,10 @@
         function check() {
             row1.appendChild(progressDiv);
             row2.appendChild(progressDiv2);
-            input1.style = "visibility: hidden;";
-            input2.style = "visibility: hidden;";
+            input1.style.display = 'none';
+            input2.style.display = 'none';
+
+            
 
         }
 
