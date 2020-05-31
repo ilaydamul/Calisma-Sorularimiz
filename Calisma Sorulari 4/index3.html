@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev3</title>
+</head>
+
+<body>
+    <script>
+
+        let options = {
+            title: "Menu",
+            width: 100,
+            height: 200
+        };
+        const { title: baslik, width: genislik, height: yukseklik } = options;//a şıkkı
+
+        const { title: baslik2 } = options;//b şıkkı
+
+        const { title: baslik3, ...options2}=options;//c şıkkı
+        console.log(baslik3);
+        console.log(options2);
+
+    </script>
+</body>
+
+</html>
