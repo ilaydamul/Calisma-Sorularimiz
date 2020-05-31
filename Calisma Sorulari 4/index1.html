@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev 1</title>
+</head>
+
+<body>
+    <script>
+
+        const funct1 = (soru, evet, hayir) => {
+            if (confirm(soru)) evet();
+            else hayir();
+        }
+
+        const funct2 = (a, b) => a + b;
+        console.log(funct2(1,3));
+        
+
+        const funct3konus = (name, text) => {
+            var konusan = "Konuşan";
+            return konusan + " " + name + " :" + text;
+        };
+        console.log(funct3konus("Ahmet","Merhaba"));
+    </script>
+</body>
+
+</html>
