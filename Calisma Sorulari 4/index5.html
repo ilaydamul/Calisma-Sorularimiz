@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev5</title>
+</head>
+
+<body>
+    <script>
+        let maaslar = {
+            "Ali": 100,
+            "Ayşe": 300,
+            "Ahmet": 250
+        };
+        let yuksek=0;
+        let yuksekad="";
+        let maas2=0;
+        for(let maas in maaslar){
+            
+
+            if(maaslar[maas]>maas2)
+            {
+                yuksekad=maas;
+                yuksek=maaslar[maas];
+            }
+            
+            maas2=maaslar[maas];
+            
+        }
+        console.log(yuksekad);
+        console.log(yuksek);
+        
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
