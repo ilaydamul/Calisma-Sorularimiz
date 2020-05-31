@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev6</title>
+</head>
+
+<body>
+    <script>
+
+        let isimler = ["Ahmet", "Ali", "Ahmet", "Ayşe",
+            "Ali", "Ahmet", "Veli", "Ayşe",];
+
+
+        const set = new Set();
+        for (let isim in isimler) {
+           // console.log(isimler[isim]);
+            set.add(isimler[isim]);
+        }
+        console.log(set);
+    </script>
+</body>
+
+</html>
