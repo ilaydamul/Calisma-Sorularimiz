@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev3</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <script>
+
+
+
+        var kedi1 = {
+            adi: "Tiger",
+            renk: "Kahve"
+        }
+
+        kedi1.prototype.yas =0;//hatalı
+
+        var kedi2 = {//2.şık
+            adi: "Tiger",
+            renk: "Kahve"
+        };
+
+
+        const kedi = (ad, renk) => {
+            this.ad = ad;//3.şık
+            this.renk = renk;
+
+            var kedi3 = {//4.şık
+                adi: "Tiger",
+                renk: "Kahve"
+            }
+        }
+
+        kedi2.prototype = Object.create(kedi1.prototype);
+        console.log(kedi2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
