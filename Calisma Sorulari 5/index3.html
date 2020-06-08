@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev4</title>
+</head>
+
+<body>
+    <script>
+
+        let person = {
+            name: "John Doe",
+            getName: function () {
+                console.log(this.name);
+
+            }
+        }
+
+        // setTimeout(person.getName(), 1000);
+       // let f = person.getName;
+        //setTimeout(f, 1000);
+
+        let f = person.getName().bind(person);
+        setTimeout(f, 1000);
+
+
+
+
+
+    </script>
+</body>
+
+</html>
