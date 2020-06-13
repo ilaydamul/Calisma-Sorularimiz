@@ -25,15 +25,17 @@
             renk: "Kahve"
         }
 
-        kedi1.prototype.yas =0;//hatalı
+        //  kedi1.prototype.yas = function(){
+        //    this.yas=0;
+        //};//hatalı
 
         var kedi2 = {//2.şık
             adi: "Tiger",
             renk: "Kahve"
         };
 
+        function Kedi(ad, renk) {
 
-        const kedi = (ad, renk) => {
             this.ad = ad;//3.şık
             this.renk = renk;
 
@@ -42,6 +44,8 @@
                 renk: "Kahve"
             }
         }
+        var kedi4 = Kedi.prototype;
+        console.log(kedi4);
 
         kedi2.prototype = Object.create(kedi1.prototype);
         console.log(kedi2);

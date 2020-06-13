@@ -15,17 +15,17 @@
 
 <script>
 
-const araba=function(renk,model,hiz){
+function Araba(renk,model,hiz){
     this.renk=renk;
     this.model=model;
     this.hiz=hiz;
     
 }
-araba.prototype.hizlan=function(){
+Araba.prototype.hizlan=function(){
     console.log("Araba hızlandı.");
     
 }
-araba.prototype.yavasla=function(){
+Araba.prototype.yavasla=function(){
     console.log("Araba yavaşlandı.");
 }
 
@@ -33,7 +33,7 @@ const kamyon={
     hiz:10,
     renk:"Beyaz"
 }
-kamyon.prototype=Object.create(araba.prototype);
+kamyon.prototype=Object.create(Araba.prototype);
 kamyon.prototype.hizlan();
 
 
