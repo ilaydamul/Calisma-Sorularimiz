@@ -9,14 +9,25 @@
 
 <body>
     <script>
-        let person = {
-            name: 'John Doe',
-            getName: function () {
-                console.log(this.name);
-            }
-        };
 
-        setTimeout(person.getName, 1000);
+        function Kedi1(ad, renk) {
+            this.ad = ad;
+            this.renk = renk;
+
+        }
+        Kedi1.prototype.yas = function (yas) {
+            return this.yas;
+        }
+        console.log(Kedi1.prototype);
+
+        var kedi2 = {
+            ad: "Boncuk",
+            renk: "Beyaz"
+        }
+        kedi2.prototype=Object.create(Kedi1);
+        console.log(kedi2.prototype);
+        
+
 
 
 
