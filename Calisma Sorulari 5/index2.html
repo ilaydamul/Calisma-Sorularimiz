@@ -20,41 +20,39 @@
 
 
 
-        /*  var kedi1 = {
-              adi: "Tiger",
-              renk: "Kahve"
-          }
-  
-          kedi1.prototype.yas = function (yas) {
-              return yas;
-          };//hatalı
-  
-  
-          var kedi2 = {//2.şık
-              adi: "Tiger",
-              renk: "Kahve"
-          };
-  
-          function Kedi(ad, renk) {
-  
-              var kedi3 = {//4.şık
-                  ad: "Tiger",
-                  renk: "Kahve"
-              }
-          }
-          var kedi4 = Kedi.prototype;
-          console.log(kedi4);
-  
-          kedi2.prototype = Object.create(kedi1.prototype);
-          console.log(kedi2);*/
+        var kedi1 = {
+            adi: "Tiger",
+            renk: "Kahve"
+        }
+        var kedi2 = {//2.şık
+            adi: "Kedi",
+            renk: "Beyaz"
+        };
 
+        kedi2.prototype = Object.create(kedi1);
+        kedi2.prototype.yas = function (yas) {
+            return yas;
+        };
+        console.log(kedi2);
+
+
+
+        function Kedi(ad, renk) {
+
+            var kedi3 = {//4.şık
+                ad: "Tiger",
+                renk: "Kahve"
+            }
+        }
+        var kedi4 = Kedi.prototype;
+        console.log(kedi4);
 
 
 
         //Yukarıdaki soruda kedi1 i obje olarak tanımlayınca hata veriyor fakat contructor olarak tanımlayınca sourn olmuyor.Bu da alttaki gibi.
 
 
-        function Kedi1(ad, renk) {
+        /*function Kedi1(ad, renk) {
             this.ad = ad;
             this.renk = renk;
 
@@ -69,7 +67,7 @@
             renk: "Beyaz"
         }
         kedi2.prototype = Object.create(Kedi1);
-        console.log(kedi2.prototype);
+        console.log(kedi2.prototype);*/
 
 
 
