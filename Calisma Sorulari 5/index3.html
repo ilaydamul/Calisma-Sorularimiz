@@ -10,26 +10,39 @@
 <body>
     <script>
 
-        function Kedi1(ad, renk) {
-            this.ad = ad;
-            this.renk = renk;
+        //BİND
+        let person = {
+            name: 'John Doe',
+            getName: function () {
+                console.log(this.name);
+            }
+        };
 
-        }
-        Kedi1.prototype.yas = function (yas) {
-            return this.yas;
-        }
-        console.log(Kedi1.prototype);
+        setTimeout(person.getName, 1000);//belirsiz verir çünkü persondan ayrı bir şekilde alır.yani personu görmez direkt person.getname yi alır.
 
-        var kedi2 = {
-            ad: "Boncuk",
-            renk: "Beyaz"
-        }
-        kedi2.prototype=Object.create(Kedi1);
-        console.log(kedi2.prototype);
+        let f = person.getName.bind(person);//yeni bir kopyasını yapıyor ve içine kendisini gönderiyor böylelikle name özelliği belirleniyor.
+        setTimeout(f, 1000);
+
+
+        let runner = {
+            name: 'Runner',
+            run: function (speed) {
+                console.log(this.name + ' runs at ' + speed + ' mph.');
+            }
+        };
+        let flyer = {
+            name: 'Flyer',
+            fly: function (speed) {
+                console.log(this.name + ' flies at ' + speed + ' mph.');
+            }
+        };
+        let run = runner.run.bind(flyer, 20);//run fonksiyonuna flyerin özelliklerini ve gerekli parametreyi gönderiyoruz.böylelikle çalışmış oluyor çünkü namesi oluyor.
+        run();
+
+
+        //CALL
+
         
-
-
-
 
     </script>
 </body>
