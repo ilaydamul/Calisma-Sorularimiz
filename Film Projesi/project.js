@@ -19,16 +19,24 @@ const url = urlElement.value;
 function addFilm(e) {
 
 
-
-
+    
     if (title === "" || director === "" || url === "") {
-
+        
     }
     else {
+
         const newFilm = new Film(title, director, url);
 
         ui.addFilmToUI(newFilm);
     }
+
+
+
+
+
+
+
+
     ui.cleraInputs(titleElement,directorElement,urlElement);
     e.preventDefault();
 
